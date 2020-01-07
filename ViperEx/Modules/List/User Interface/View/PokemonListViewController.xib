@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonListViewController" customModule="ViperEx" customModuleProvider="target">
+            <connections>
+                <outlet property="sortSegmentedControl" destination="hbe-93-yHl" id="wa5-SI-RHD"/>
+                <outlet property="tableView" destination="XgA-BN-xc2" id="u0T-Id-gH1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-93-yHl">
+                    <rect key="frame" x="0.0" y="44" width="414" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Mwy-g8-Z0Y"/>
+                    </constraints>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="sortIndexChanged:" destination="-1" eventType="valueChanged" id="Z1d-La-znz"/>
+                    </connections>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XgA-BN-xc2">
+                    <rect key="frame" x="0.0" y="82" width="414" height="794"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XgA-BN-xc2" secondAttribute="bottom" constant="20" symbolic="YES" id="6Rx-LZ-ZM7"/>
+                <constraint firstItem="hbe-93-yHl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9Pk-dh-7pI"/>
+                <constraint firstItem="XgA-BN-xc2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Kn1-Dk-0cW"/>
+                <constraint firstItem="XgA-BN-xc2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Y9J-W3-Usl"/>
+                <constraint firstItem="hbe-93-yHl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pfM-mR-DhI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hbe-93-yHl" secondAttribute="trailing" id="s7H-6W-EkI"/>
+                <constraint firstItem="XgA-BN-xc2" firstAttribute="top" secondItem="hbe-93-yHl" secondAttribute="bottom" constant="8" symbolic="YES" id="zXk-Bf-qYB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+</document>
