@@ -26,7 +26,7 @@ class PokemonListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        presenter?.viewWillAppear()
     }
     
     @IBAction func sortIndexChanged(_ sender: Any) {
@@ -58,6 +58,7 @@ extension PokemonListViewController: PokemonListPresenterOutput {
     
     func updateUIList() {
         DispatchQueue.main.async {
+            self.view.stopActivity()
             self.tableView.reloadData()
         }
     }
