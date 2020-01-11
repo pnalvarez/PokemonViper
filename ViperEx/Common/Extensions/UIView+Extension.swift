@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 extension UIView {
     
@@ -19,11 +20,9 @@ extension UIView {
         
         addSubview(activity)
         
-        activity.translatesAutoresizingMaskIntoConstraints = false
-        activity.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 1.0).isActive = true
-        activity.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 1.0).isActive = true
-        activity.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1.0).isActive = true
-        activity.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1.0).isActive = true
+        activity.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
     
     func stopActivity() {

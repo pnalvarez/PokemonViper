@@ -10,8 +10,8 @@ import Foundation
 
 struct PokemonEntity {
     
-    var name = ""
-    var pokemonURL = ""
+    var name: String = ""
+    var pokemonURL: String = ""
     var id: Int = 0
     
     init(name: String, pokemonURL: String){

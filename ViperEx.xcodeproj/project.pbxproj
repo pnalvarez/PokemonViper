@@ -41,10 +41,12 @@
 		3FB6C2F723C2554500115947 /* PokemonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6C2F523C2554500115947 /* PokemonTableViewCell.xib */; };
 		3FB6C2F923C257C500115947 /* PokemonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6C2F823C257C500115947 /* PokemonEntity.swift */; };
 		3FB6C2FB23C2590A00115947 /* PokemonAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB6C2FA23C2590A00115947 /* PokemonAPIModel.swift */; };
-		4C58C039E819E9FBA7C73FA0 /* Pods_ViperEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E1C8889F524407DA7F75CF /* Pods_ViperEx.framework */; };
+		7AAFBE507D597DE4E8F093EB /* Pods_ViperEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F596C846963C743FA45DE1D /* Pods_ViperEx.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		019737293389C2EAAA000BB1 /* Pods-ViperEx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperEx.release.xcconfig"; path = "Target Support Files/Pods-ViperEx/Pods-ViperEx.release.xcconfig"; sourceTree = "<group>"; };
+		2F596C846963C743FA45DE1D /* Pods_ViperEx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperEx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9773AC23C2640A00A9633A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		3F9773AE23C2642A00A9633A /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		3F9773B023C2644000A9633A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -81,9 +83,7 @@
 		3FB6C2F523C2554500115947 /* PokemonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonTableViewCell.xib; sourceTree = "<group>"; };
 		3FB6C2F823C257C500115947 /* PokemonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonEntity.swift; sourceTree = "<group>"; };
 		3FB6C2FA23C2590A00115947 /* PokemonAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPIModel.swift; sourceTree = "<group>"; };
-		51DC6DD1A5167A4A884F63D2 /* Pods-ViperEx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperEx.debug.xcconfig"; path = "Target Support Files/Pods-ViperEx/Pods-ViperEx.debug.xcconfig"; sourceTree = "<group>"; };
-		B6E1C8889F524407DA7F75CF /* Pods_ViperEx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperEx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9C143AB5935045648C79582 /* Pods-ViperEx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperEx.release.xcconfig"; path = "Target Support Files/Pods-ViperEx/Pods-ViperEx.release.xcconfig"; sourceTree = "<group>"; };
+		984FA79AEB8592C768822485 /* Pods-ViperEx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperEx.debug.xcconfig"; path = "Target Support Files/Pods-ViperEx/Pods-ViperEx.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C58C039E819E9FBA7C73FA0 /* Pods_ViperEx.framework in Frameworks */,
+				7AAFBE507D597DE4E8F093EB /* Pods_ViperEx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +101,8 @@
 		3DE3AB8DDEF140FC2959ED9F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				51DC6DD1A5167A4A884F63D2 /* Pods-ViperEx.debug.xcconfig */,
-				F9C143AB5935045648C79582 /* Pods-ViperEx.release.xcconfig */,
+				984FA79AEB8592C768822485 /* Pods-ViperEx.debug.xcconfig */,
+				019737293389C2EAAA000BB1 /* Pods-ViperEx.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -113,7 +113,7 @@
 				3FB6C2B223C1929300115947 /* ViperEx */,
 				3FB6C2B123C1929300115947 /* Products */,
 				3DE3AB8DDEF140FC2959ED9F /* Pods */,
-				E0D64FDE962609F0E6F28437 /* Frameworks */,
+				EB255275D02BDCB1CBE1F3EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -351,10 +351,10 @@
 			path = Mapper;
 			sourceTree = "<group>";
 		};
-		E0D64FDE962609F0E6F28437 /* Frameworks */ = {
+		EB255275D02BDCB1CBE1F3EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B6E1C8889F524407DA7F75CF /* Pods_ViperEx.framework */,
+				2F596C846963C743FA45DE1D /* Pods_ViperEx.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -366,11 +366,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FB6C2C423C1929500115947 /* Build configuration list for PBXNativeTarget "ViperEx" */;
 			buildPhases = (
-				03DE329F643A47E2AB0507C3 /* [CP] Check Pods Manifest.lock */,
+				AD12DA8CA06310598BC12981 /* [CP] Check Pods Manifest.lock */,
 				3FB6C2AC23C1929300115947 /* Sources */,
 				3FB6C2AD23C1929300115947 /* Frameworks */,
 				3FB6C2AE23C1929300115947 /* Resources */,
-				1AEC01CACA0C264F7667EE6E /* [CP] Embed Pods Frameworks */,
+				420DAF0121654C8D0A2FF94D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -429,7 +429,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03DE329F643A47E2AB0507C3 /* [CP] Check Pods Manifest.lock */ = {
+		420DAF0121654C8D0A2FF94D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ViperEx/Pods-ViperEx-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ViperEx/Pods-ViperEx-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ViperEx/Pods-ViperEx-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD12DA8CA06310598BC12981 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,23 +466,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1AEC01CACA0C264F7667EE6E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ViperEx/Pods-ViperEx-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ViperEx/Pods-ViperEx-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ViperEx/Pods-ViperEx-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -627,7 +627,7 @@
 		};
 		3FB6C2C523C1929500115947 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51DC6DD1A5167A4A884F63D2 /* Pods-ViperEx.debug.xcconfig */;
+			baseConfigurationReference = 984FA79AEB8592C768822485 /* Pods-ViperEx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -646,7 +646,7 @@
 		};
 		3FB6C2C623C1929500115947 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9C143AB5935045648C79582 /* Pods-ViperEx.release.xcconfig */;
+			baseConfigurationReference = 019737293389C2EAAA000BB1 /* Pods-ViperEx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

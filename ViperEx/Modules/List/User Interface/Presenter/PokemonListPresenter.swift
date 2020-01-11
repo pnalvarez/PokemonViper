@@ -68,6 +68,7 @@ class PokemonListPresenter: PokemonListPresenterInput {
     }
     
     func viewDidLoad() {
+        output?.presentLoading()
         DispatchQueue(label: "Fetch Pokemon").async {
             self.interactor.fetch()
         }
@@ -77,7 +78,7 @@ class PokemonListPresenter: PokemonListPresenterInput {
     }
     
     func viewWillAppear() {
-        output?.presentLoading()
+
     }
     
     func didSelectCell(at index: Int) {
