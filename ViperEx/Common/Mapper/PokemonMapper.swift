@@ -36,9 +36,8 @@ class PokemonMapper {
         
         var types = [String]()
                
-               for type in details.types{
-                   
-                   guard let _type = type["type"] as? [String : Any] else{
+               for type in details.types {
+                   guard let _type = type["type"] as? [String : Any] else {
                        return PokemonDetailsEntity(name: "", order: 0, id: 0, weight: 0, height: 0, baseExperience: 0, image: "", types: [],  mainMove: "")
                    }
                    types.append(_type["name"] as! String)
@@ -54,6 +53,12 @@ class PokemonMapper {
     
     static func parse(from details: PokemonDetailsEntity) -> PokemonDetailsViewModel {
         
-        return PokemonDetailsViewModel(name: details.name, info:  " order: \(details.order)\n weight: \(details.weight)\n height: \(details.height)\n base experience: \(details.baseExperience)", id: details.id, image: URL(string: details.image) , types: details.types[0], mainMove: details.mainMove)
+        var typeString = ""
+        
+        for type in details.types {
+            typeString.append(contentsOf: "\(type) ")
+        }
+        
+        return PokemonDetailsViewModel(name: details.name, info:  " order: \(details.order)\n weight: \(details.weight)\n height: \(details.height)\n base experience: \(details.baseExperience)", id: details.id, image: URL(string: details.image) , types: typeString, mainMove: details.mainMove)
     }
 }
