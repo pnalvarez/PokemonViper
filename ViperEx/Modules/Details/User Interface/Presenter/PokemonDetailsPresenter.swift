@@ -16,11 +16,16 @@ protocol PokemonDetailsPresenterInput {
     func viewDidAppear()
     func nextButtonPressed()
     func previousButtonPressed()
+    func handleSideButtons()
 }
 
 protocol PokemonDetailsPresenterOutput: class {
     func updateUI()
     func presentLoading()
+    func showNextButton()
+    func fadeNextButton()
+    func showPreviousButton()
+    func fadePreviousButton()
 }
 
 class PokemonDetailsPresenter: PokemonDetailsPresenterInput {
@@ -64,6 +69,19 @@ class PokemonDetailsPresenter: PokemonDetailsPresenterInput {
         
         let id = viewModel?.id ?? 1
         interactor.fetchDetails(id: id - 1)
+    }
+    
+    func handleSideButtons() {
+        guard let id = viewModel?.id, id > 1 else {
+            output?.fadePreviousButton()
+            return
+        }
+        output?.showPreviousButton()
+        guard id < 150 else {
+            output?.fadeNextButton()
+            return
+        }
+        output?.showNextButton()
     }
 }
 

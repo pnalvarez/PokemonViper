@@ -55,23 +55,27 @@ extension PokemonDetailsViewController: PokemonDetailsPresenterOutput {
         attackLabel.text = "Ataque: \(display?.mainMove ?? "")"
         imageView.sd_setImage(with: display?.image, completed: nil)
         
-        guard let id = display?.id, id > 1 else {
-            previousButton.alpha = 0.0
-            return
-        }
-        previousButton.alpha = 1.0
-        
-        guard id < 150 else {
-            nextButton.alpha = 0.0
-            return
-        }
-        nextButton.alpha = 1.0
+        presenter?.handleSideButtons()
     }
     
     func presentLoading() {
+        title = ""
         DispatchQueue.main.async {
             self.view.presentActivity()
         }
+    }
+    
+    func showNextButton() {
+        nextButton.alpha = 1.0
+    }
+    func fadeNextButton() {
+        nextButton.alpha = 0.0
+    }
+    func showPreviousButton() {
+        previousButton.alpha = 1.0
+    }
+    func fadePreviousButton() {
+        previousButton.alpha = 0.0
     }
 }
 

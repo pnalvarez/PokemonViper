@@ -23,12 +23,6 @@ class PokemonListViewController: UIViewController {
         presenter?.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        presenter?.viewWillAppear()
-    }
-    
     @IBAction func sortIndexChanged(_ sender: Any) {
         presenter?.sortBy(selectedIndex: sortSegmentedControl.selectedSegmentIndex)
     }

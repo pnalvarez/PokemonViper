@@ -14,7 +14,6 @@ protocol PokemonListPresenterInput {
     var title: String { get }
     
     func viewDidLoad()
-    func viewWillAppear()
     func didSelectCell(at index: Int)
     func sortBy(selectedIndex: Int)
     func getPokemon(at index: Int) -> PokemonListItemViewModel
@@ -75,10 +74,6 @@ class PokemonListPresenter: PokemonListPresenterInput {
         DispatchQueue(label: "Find sort options").async {
             self.interactor.findSortOptions()
         }
-    }
-    
-    func viewWillAppear() {
-
     }
     
     func didSelectCell(at index: Int) {
